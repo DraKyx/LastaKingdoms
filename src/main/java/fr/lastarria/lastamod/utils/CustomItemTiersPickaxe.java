@@ -1,7 +1,12 @@
 package fr.lastarria.lastamod.utils;
 
 import fr.lastarria.lastamod.init.ModItems;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.IItemTier;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
 

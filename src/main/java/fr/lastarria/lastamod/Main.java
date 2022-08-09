@@ -22,7 +22,6 @@ public class Main {
     {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientsetup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::serverStartingEvent);
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.ITEMS.register(bus);
@@ -43,11 +42,4 @@ public class Main {
         ModKeybindings.register();
         bus.addListener(ModKeybindings::onKeyPress);
     }
-
-    private void serverStartingEvent(FMLServerStartingEvent event) {
-
-        KingdomCommand.register(event.getServer().getCommands().getDispatcher());
-
-    }
-
 }
