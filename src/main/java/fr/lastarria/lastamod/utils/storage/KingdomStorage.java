@@ -52,6 +52,7 @@ public class KingdomStorage extends WorldSavedData {
 
             return nbt;
         }
+
     }
 
 }
