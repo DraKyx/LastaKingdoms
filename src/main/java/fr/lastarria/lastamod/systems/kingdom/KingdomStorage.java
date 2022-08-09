@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class KingdomStorage {
+public class KingdomStorage extends WorldSavedData {
 
     public static final String NAME = Main.MODID + "_kingdoms";
 
