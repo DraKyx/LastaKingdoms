@@ -1,0 +1,20 @@
+{
+  "item.lastamod.vladinite_ingot": "Lingot de Vladinite",
+  "item.lastamod.vladinite_stick": "Bâton en Vladinite",
+  "block.lastamod.vladinite_b": "Block De Vladinite",
+  "item.lastamod.vladinite_pickaxe": "Pioche en Vladinite",
+  "item.lastamod.vladinite_sword": "Épée en Vladinite",
+  "item.lastamod.vladinite_shovel": "Pelle en Vladinite",
+  "item.lastamod.vladinite_axe": "Hache en Vladinite",
+  "block.lastamod.vladiniteore": "Minerai de Vladinite",
+  "item.lastamod.blue_apple": "Pomme Bleue",
+  "item.lastamod.vladinite_chestplate": "Plastron en Vladinite",
+  "item.lastamod.vladinite_boots": "Bottes en Vladinite",
+  "item.lastamod.vladinite_leggings": "Pantalon en Vladinite",
+  "item.lastamod.vladinite_helmet": "Casque en Vladinite",
+
+  "key.lastamod.spells": "Sorts",
+  "key.lastamod.fantasia": "LastaMod",
+
+  "itemgroup.lastamod.vladinite": "Vladinite"
+}

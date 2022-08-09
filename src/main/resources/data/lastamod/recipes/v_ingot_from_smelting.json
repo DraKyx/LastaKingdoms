@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lastamod:vladiniteore"
+  },
+  "result": "lastamod:vladinite_ingot",
+  "experience": 2.0,
+  "cookingtime": 200
+}

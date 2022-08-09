@@ -1,0 +1,16 @@
+{
+
+  "desert": {
+    "members": [
+      "uuid.idgrade",
+      "uuid2.idgrade2"
+    ],
+    "owner": "uuid",
+    "money": 1500365,
+    "war": [
+      "swamps",
+      "mountains"
+    ]
+  }
+
+}

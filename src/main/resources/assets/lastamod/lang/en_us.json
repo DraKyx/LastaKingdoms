@@ -1,0 +1,21 @@
+{
+  "item.lastamod.vladinite_ingot": "Vladinite Ingot",
+  "item.lastamod.vladinite_stick": "Vladinite Stick",
+  "item.lastamod.vladinite_pickaxe": "Vladinite Pïckaxe",
+  "item.lastamod.vladinite_sword": "Vladinite Sword",
+  "item.lastamod.vladinite_shovel": "Vladinite Shovel",
+  "item.lastamod.vladinite_axe": "Vladinite Axe",
+  "item.lastamod.blue_apple": "Blue Apple",
+  "item.lastamod.vladinite_chestplate": "Vladinite Chestplate",
+  "item.lastamod.vladinite_boots": "Vladinite Boots",
+  "item.lastamod.vladinite_leggings": "Vladinite Leggings",
+  "item.lastamod.vladinite_helmet": "Vladinite Helmet",
+
+  "block.lastamod.vladinite_b": "Vladinite Block",
+  "block.lastamod.vladiniteore": "Vladinite Ore",
+
+  "key.lastamod.spells": "Spells",
+  "key.categories.lastamod": "LastaMod",
+
+  "itemgroup.lastamod.vladinite": "Vladinite"
+}
