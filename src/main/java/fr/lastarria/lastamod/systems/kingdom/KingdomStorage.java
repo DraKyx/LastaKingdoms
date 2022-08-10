@@ -118,7 +118,7 @@ public class KingdomStorage extends WorldSavedData {
         if(this.isPlayerInKingdom(player)) return;
 
         Kingdom kingdom = this.getKingdomByName(kingdomName);
-        int perm = kingdom.getMembers().isEmpty() ? 0 : 10;
+        int perm = kingdom.getMembers().size() == 1 ? 0 : 10;
 
         kingdom.addMember(player.getUUID(), perm);
         if(perm == 10) {

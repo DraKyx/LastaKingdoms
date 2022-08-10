@@ -19,6 +19,8 @@
 
   "itemGroup.vladinite": "Vladinite",
 
-  "lastamod.kingdoms_gui.title": "Kingdoms",
-  "lastamod.kingdoms_gui.done_button": "Done"
+  "lastamod.gui.kingdom_info.title": "Your Kingdom",
+  "lastamod.gui.kingdom_join_gui": "Kingdoms",
+  "lastamod.kingdoms_gui.done_button": "Done",
+  "lastarria.gui.kingdom_join.choose_text": "Choose a Kingdom"
 }

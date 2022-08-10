@@ -13,7 +13,7 @@ public class KingdomInfoGui extends Screen {
 
     public KingdomInfoGui(Kingdom kingdom)
     {
-        super(new TranslationTextComponent("lastamod.gui.kingdom_info.title", "LastaMod"));
+        super(new TranslationTextComponent("lastamod.gui.kingdom_info.title"));
         this.kingdom = kingdom;
     }
 
@@ -21,7 +21,7 @@ public class KingdomInfoGui extends Screen {
     protected void init()
     {
         this.addButton(new Button((this.width - 200) / 2, this.height - 50, 200, 20,
-                new TranslationTextComponent("lastamod.gui.kingdom_info.done_button"), button -> this.onClose()));
+                new TranslationTextComponent("lastamod.gui.kingdom_info.done_button"), action -> this.onClose()));
     }
 
     @Override

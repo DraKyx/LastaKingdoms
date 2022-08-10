@@ -19,7 +19,7 @@ public class KingdomJoinGui extends Screen {
     private int x;
     private int y;
 
-    protected KingdomJoinGui(List<Kingdom> kingdoms) {
+    public KingdomJoinGui(List<Kingdom> kingdoms) {
         super(new TranslationTextComponent("lastamod.gui.kingdom_join_gui"));
         this.kingdoms = kingdoms;
         this.x = this.width / 2;

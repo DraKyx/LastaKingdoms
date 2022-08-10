@@ -6,6 +6,7 @@ import fr.lastarria.lastamod.systems.kingdom.Kingdom;
 import fr.lastarria.lastamod.systems.kingdom.KingdomStorage;
 import fr.lastarria.lastamod.utils.KingdomsEnum;
 import net.minecraft.command.CommandSource;
+import net.minecraft.entity.player.PlayerEntity;
 
 import java.util.*;
 
@@ -22,13 +23,15 @@ public class GenerateKingdomCommand {
 
                     Map<UUID, Integer> map = new HashMap<>();
                     List<String> list = new ArrayList<>();
+                    UUID player = ((PlayerEntity) ctx.getSource().getEntity()).getUUID();
 
-                    storage.DATA.add(new Kingdom(KingdomsEnum.DESERT.name(), map, 1000, null, list));
-                    storage.DATA.add(new Kingdom(KingdomsEnum.SWAMPS.name(), map, 0, null, list));
-                    storage.DATA.add(new Kingdom(KingdomsEnum.MOUNTAINS.name(), map, 0, null, list));
-                    storage.DATA.add(new Kingdom(KingdomsEnum.FROST_PLAINS.name(), map, 0, null, list));
-                    storage.DATA.add(new Kingdom(KingdomsEnum.JUNGLE.name(), map, 0, null, list));
-                    storage.DATA.add(new Kingdom(KingdomsEnum.FOREST.name(), map, 0, null, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.DESERT.name(), map, 1000, player, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.SWAMPS.name(), map, 0, player, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.MOUNTAINS.name(), map, 0, player, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.FROST_PLAINS.name(), map, 0, player, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.JUNGLE.name(), map, 0, player, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.FOREST.name(), map, 0, player, list));
+                    storage.setDirty();
 
                     return 0;
                 })
