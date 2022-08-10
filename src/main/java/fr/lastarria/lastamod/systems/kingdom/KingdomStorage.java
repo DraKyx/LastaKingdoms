@@ -14,7 +14,7 @@ public class KingdomStorage extends WorldSavedData {
     private static final String NAME = Main.MODID + "_players_kingdoms";
     private static final String S_UUID = "id";
     private static final String S_PERM = "perm";
-    private List<Kingdom> DATA = new ArrayList<>();
+    public List<Kingdom> DATA = new ArrayList<>();
 
 
     public KingdomStorage(String s) {
@@ -81,7 +81,9 @@ public class KingdomStorage extends WorldSavedData {
                 members.add(member);
             }
             kingTag.add(members);
-            kingdoms.add(kingTag);
+            CompoundNBT kingdom = new CompoundNBT();
+            kingdom.put(DATA.get(i).getName(), kingTag);
+            kingdoms.add(kingdom);
         }
         nbt.put("kingdoms", kingdoms);
         return nbt;

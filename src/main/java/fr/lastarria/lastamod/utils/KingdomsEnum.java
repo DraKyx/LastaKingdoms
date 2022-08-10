@@ -3,7 +3,12 @@ package fr.lastarria.lastamod.utils;
 public enum KingdomsEnum
 {
 
-    DESERT("desert", 100, 100, 0, 0);
+    DESERT("Desert", 100, 100, 0, 0),
+    SWAMPS("Swamps", 100, 100, 0, 0),
+    MOUNTAINS("Moutains", 100, 100, 0, 0),
+    FROST_PLAINS("Frost Plains", 100, 100, 0, 0),
+    JUNGLE("Jungle", 100, 100, 0, 0),
+    FOREST("Forest", 100, 100, 0, 0);
 
     private String name;
     private int x1;
