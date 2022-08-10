@@ -1,16 +1,20 @@
 {
 
-  "desert": {
-    "members": [
-      "uuid.idgrade",
-      "uuid2.idgrade2"
-    ],
-    "owner": "uuid",
-    "money": 1500365,
-    "war": [
-      "swamps",
-      "mountains"
-    ]
+  "kingdoms": {
+
+    "desert": {
+      "members": {
+        "uuid": 1,
+        "uuid2": 5
+      },
+      "owner": "uuid3",
+      "money": 1500365,
+      "war": [
+        "swamps",
+        "mountains"
+      ]
+    }
+
   }
 
 }
