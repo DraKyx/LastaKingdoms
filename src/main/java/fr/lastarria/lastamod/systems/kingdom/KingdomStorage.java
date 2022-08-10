@@ -60,19 +60,15 @@ public class KingdomStorage extends WorldSavedData {
     public CompoundNBT save(CompoundNBT nbt) {
 
         final ListNBT kingdoms = new ListNBT();
+        CompoundNBT testTag = new CompoundNBT();
 
         for(int i = 0 ; i < DATA.size() ; i++) {
 
-            ListNBT kingTag = new ListNBT();
+            CompoundNBT kingTag = new CompoundNBT();
             Kingdom curKing = DATA.get(i);
 
-            CompoundNBT money = new CompoundNBT();
-            money.putInt("money", curKing.getMoney());
-            kingTag.add(money);
-
-            CompoundNBT owner = new CompoundNBT();
-            owner.putUUID("owner", curKing.getOwner());
-            kingTag.add(owner);
+            kingTag.putInt("money", curKing.getMoney());
+            kingTag.putUUID("owner", curKing.getOwner());
 
             ListNBT members = new ListNBT();
             for(final Map.Entry<UUID, Integer> entry : curKing.getMembers().entrySet()) {
@@ -81,10 +77,8 @@ public class KingdomStorage extends WorldSavedData {
                 member.putInt(S_PERM, entry.getValue());
                 members.add(member);
             }
-            kingTag.add(members);
-            CompoundNBT kingdom = new CompoundNBT();
-            kingdom.put(DATA.get(i).getName(), kingTag);
-            kingdoms.add(kingdom);
+            kingTag.put("members", members);
+            kingdoms.add(kingTag);
         }
         nbt.put("kingdoms", kingdoms);
         return nbt;
@@ -130,6 +124,7 @@ public class KingdomStorage extends WorldSavedData {
         if(perm == 10) {
             kingdom.setOwner(player.getUUID());
         }
+        this.setDirty();
     }
 
 }
