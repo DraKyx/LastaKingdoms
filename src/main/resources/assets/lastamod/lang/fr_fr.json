@@ -16,5 +16,7 @@
   "key.lastamod.spells": "Sorts",
   "key.lastamod.fantasia": "LastaMod",
 
-  "itemgroup.lastamod.vladinite": "Vladinite"
+  "itemGroup.vladinite": "Vladinite",
+
+  "lastamod.kingdoms_gui.title": "Royaumes"
 }

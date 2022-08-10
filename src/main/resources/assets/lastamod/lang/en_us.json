@@ -17,5 +17,7 @@
   "key.lastamod.spells": "Spells",
   "key.categories.lastamod": "LastaMod",
 
-  "itemgroup.lastamod.vladinite": "Vladinite"
+  "itemGroup.vladinite": "Vladinite",
+
+  "lastamod.kingdoms_gui.title": "Kingdoms"
 }
