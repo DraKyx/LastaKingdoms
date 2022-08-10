@@ -2,11 +2,9 @@ package fr.lastarria.lastamod.command;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import fr.lastarria.lastamod.gui.KingdomsGui;
 import fr.lastarria.lastamod.systems.kingdom.Kingdom;
 import fr.lastarria.lastamod.systems.kingdom.KingdomStorage;
 import fr.lastarria.lastamod.utils.KingdomsEnum;
-import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandSource;
 
 import java.util.*;
@@ -25,7 +23,7 @@ public class GenerateKingdomCommand {
                     Map<UUID, Integer> map = new HashMap<>();
                     List<String> list = new ArrayList<>();
 
-                    storage.DATA.add(new Kingdom(KingdomsEnum.DESERT.name(), map, 0, null, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.DESERT.name(), map, 1000, null, list));
                     storage.DATA.add(new Kingdom(KingdomsEnum.SWAMPS.name(), map, 0, null, list));
                     storage.DATA.add(new Kingdom(KingdomsEnum.MOUNTAINS.name(), map, 0, null, list));
                     storage.DATA.add(new Kingdom(KingdomsEnum.FROST_PLAINS.name(), map, 0, null, list));

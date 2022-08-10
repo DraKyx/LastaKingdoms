@@ -1,6 +1,7 @@
 package fr.lastarria.lastamod.systems.kingdom;
 
 import fr.lastarria.lastamod.Main;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.nbt.ListNBT;
 import net.minecraft.server.MinecraftServer;
@@ -89,5 +90,46 @@ public class KingdomStorage extends WorldSavedData {
         return nbt;
     }
 
+    public boolean isPlayerInKingdom(PlayerEntity player) {
+        boolean returning = false;
+
+        for(int i = 0 ; i < DATA.size() ; i++) {
+            if(DATA.get(i).getMembers().containsKey(player.getUUID())) returning = true;
+        }
+
+        return returning;
+    }
+
+    public Kingdom getPlayerKingdom(PlayerEntity player) {
+        Kingdom returning = null;
+
+        for(int i = 0 ; i < DATA.size() ; i++) {
+            if(DATA.get(i).getMembers().containsKey(player.getUUID())) returning = DATA.get(i);
+        }
+
+        return returning;
+    }
+
+    public Kingdom getKingdomByName(String name) {
+        Kingdom returning = null;
+
+        for(int i = 0 ; i < DATA.size() ; i++) {
+            if(DATA.get(i).getName().toLowerCase().equals(name.toLowerCase())) returning = DATA.get(i);
+        }
+
+        return returning;
+    }
+
+    public void joinKingdom(PlayerEntity player, String kingdomName) {
+        if(this.isPlayerInKingdom(player)) return;
+
+        Kingdom kingdom = this.getKingdomByName(kingdomName);
+        int perm = kingdom.getMembers().isEmpty() ? 0 : 10;
+
+        kingdom.addMember(player.getUUID(), perm);
+        if(perm == 10) {
+            kingdom.setOwner(player.getUUID());
+        }
+    }
 
 }
