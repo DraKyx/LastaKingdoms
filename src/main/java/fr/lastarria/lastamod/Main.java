@@ -26,7 +26,6 @@ public class Main {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.ITEMS.register(bus);
         ModBlocks.BLOCKS.register(bus);
-
     }
 
     private void setup(FMLCommonSetupEvent e)
