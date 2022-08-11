@@ -25,4 +25,7 @@ public enum KingdomsEnum
         this.z2 = z2;
     }
 
+    public String getName() {
+        return name;
+    }
 }

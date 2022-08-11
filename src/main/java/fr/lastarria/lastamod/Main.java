@@ -46,6 +46,8 @@ public class Main {
 
         int index = 0;
         NETWORK.registerMessage(index, JoinKingdomPacket.class, JoinKingdomPacket::encode, JoinKingdomPacket::decode, JoinKingdomPacket::handle, Optional.of(NetworkDirection.PLAY_TO_SERVER));
+        NETWORK.registerMessage(index, JoinKingdomPacket.class, JoinKingdomPacket::encode, JoinKingdomPacket::decode, JoinKingdomPacket::handle, Optional.of(NetworkDirection.PLAY_TO_CLIENT));
+
     }
 
     private void clientsetup(FMLClientSetupEvent e)

@@ -23,15 +23,14 @@ public class GenerateKingdomCommand {
 
                     Map<UUID, Integer> map = new HashMap<>();
                     List<String> list = new ArrayList<>();
-                    UUID player = ((PlayerEntity) ctx.getSource().getEntity()).getUUID();
+                    UUID id = ((PlayerEntity) ctx.getSource().getEntity()).getUUID();
 
-                    storage.DATA.add(new Kingdom(KingdomsEnum.DESERT.name(), map, 1000, player, list));
-                    storage.DATA.add(new Kingdom(KingdomsEnum.SWAMPS.name(), map, 0, player, list));
-                    storage.DATA.add(new Kingdom(KingdomsEnum.MOUNTAINS.name(), map, 0, player, list));
-                    storage.DATA.add(new Kingdom(KingdomsEnum.FROST_PLAINS.name(), map, 0, player, list));
-                    storage.DATA.add(new Kingdom(KingdomsEnum.JUNGLE.name(), map, 0, player, list));
-                    storage.DATA.add(new Kingdom(KingdomsEnum.FOREST.name(), map, 0, player, list));
-                    storage.setDirty();
+                    storage.DATA.add(new Kingdom(KingdomsEnum.DESERT.name(), map, 1000, id, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.SWAMPS.name(), map, 0, id, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.MOUNTAINS.name(), map, 0, id, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.FROST_PLAINS.name(), map, 0, id, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.JUNGLE.name(), map, 0, id, list));
+                    storage.DATA.add(new Kingdom(KingdomsEnum.FOREST.name(), map, 0, id, list));
 
                     return 0;
                 })

@@ -2,6 +2,7 @@ package fr.lastarria.lastamod.systems.kingdom;
 
 import fr.lastarria.lastamod.Main;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.nbt.ListNBT;
 import net.minecraft.server.MinecraftServer;
@@ -126,5 +127,7 @@ public class KingdomStorage extends WorldSavedData {
         }
         this.setDirty();
     }
+
+    public static CompoundNBT
 
 }
