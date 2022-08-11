@@ -128,6 +128,4 @@ public class KingdomStorage extends WorldSavedData {
         this.setDirty();
     }
 
-    public static CompoundNBT
-
 }
